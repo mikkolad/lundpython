@@ -1,7 +1,7 @@
 [project]
 name = "lundpython"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0"
+description = "Presentations, manuals, and exercises for the Python course at Lund Observatory."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,9 +13,12 @@ dependencies = [
 ]
 
 [dependency-groups]
+# Packages only needed to work on the code.
 dev = [
+    # Hooks need to be installed manually with 'pre-commit install'
     "pre-commit>=4.0.1",
 ]
+# Packages only needed to run the "tools" demonstrations in presentation 4.
 tools = [
     "ipytest>=0.14.2",
     "ipywidgets>=8.1.5",

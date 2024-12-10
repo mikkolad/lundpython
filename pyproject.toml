@@ -1,0 +1,27 @@
+[project]
+name = "lundpython"
+version = "1.0"
+description = "Presentations, manuals, and exercises for the Python course at Lund Observatory."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "astropy>=7.0.0",
+    "jupyter>=1.1.1",
+    "jupyterlab-rise>=0.42.0",
+    "matplotlib>=3.9.2",
+    "numpy>=2.1.3",
+]
+
+[dependency-groups]
+# Packages only needed to work on the code.
+dev = [
+    # Hooks need to be installed manually with 'pre-commit install'
+    "pre-commit>=4.0.1",
+]
+# Packages only needed to run the "tools" demonstrations in presentation 4.
+tools = [
+    "ipytest>=0.14.2",
+    "ipywidgets>=8.1.5",
+    "line-profiler>=4.1.3",
+    "tqdm>=4.67.1",
+]
